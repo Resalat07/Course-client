@@ -3,7 +3,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { Outlet } from 'react-router-dom';
 import Course from '../components/Course/Course';
 import Header from '../components/Header/Header';
-import ReactSwitch from "react-switch";
+
 
 
 import './Main.css'
@@ -46,7 +46,7 @@ const Main = () => {
                     </Container>
                     <div className='bg d-flex align-items-end justify-content-center align-items-center'>
 
-                        <p className='text-white '>
+                        <p className='text-white'>
                             Copy Right 2022,
                         </p>
 
