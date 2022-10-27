@@ -8,6 +8,7 @@ import CourseDetails from "../components/CourseDetalis/CourseDetails";
 import Carts from "../components/Cart/Carts";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import FAQPage from "../components/FAQPage/FAQPage";
+import Blog from "../components/Blog/Blog";
 
 
 
@@ -46,6 +47,9 @@ export const router = createBrowserRouter([
                 element:<PrivateRoute><Carts></Carts></PrivateRoute>,
                 loader: ({params})=> fetch(`https://course-server-resalat07.vercel.app/courseDetails/${params.id}`)
                 
+            },{
+                path:'/blog',
+                element:<Blog></Blog>
             }
             
             

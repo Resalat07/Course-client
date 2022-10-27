@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
-import { Image } from 'react-bootstrap';
+import { Image, Tooltip } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
@@ -12,13 +12,24 @@ import { FaUser } from 'react-icons/fa'
 import Course from '../Course/Course';
 import ReactSwitch from "react-switch";
 
+
+import Overlay from 'react-bootstrap/Overlay';
+import { useRef } from 'react';
+
+
+
+
+
 const Header = (props) => {
+
+    const [show, setShow] = useState(false);
+    const target = useRef(null);
 
     const [theme, setTheme] = useState("dark");
     const toggleTheme = () => {
         setTheme((curr) => (curr === "light" ? "dark" : "light"));
         props.onChange(theme)
-      };
+    };
 
 
     const { user, logOut } = useContext(AuthContext)
@@ -45,26 +56,46 @@ const Header = (props) => {
 
 
                         </Nav>
-                        
+
 
                         <div className='d-flex justify-content-center'>
                             <Nav.Link className='mt-3' href="#action1"><Link className='font-text' to='/'>Home</Link></Nav.Link>
-                            <Nav.Link className='mt-3 m-2'href="#action2"> <Link className='font-text' to='/faqs'>FAQ</Link></Nav.Link>
+                            <Nav.Link className='mt-3 m-2' href="#action2"> <Link className='font-text' to='/faqs'>FAQ</Link></Nav.Link>
 
                             <Nav.Link>
-                            <div className="switch mt-3 m-2">
+                                <div className="switch mt-3 m-2">
 
-                                <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+                                    <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
 
-                            </div>
-                        </Nav.Link>
-
-
-
-                            <Nav.Link href="#action1" className='m-2 mt-2'>{user?.photoURL ?
-                                <Image roundedCircle style={{ height: '30px' }} src={user.photoURL}></Image>
-                                : <FaUser></FaUser>}
+                                </div>
                             </Nav.Link>
+
+
+
+
+
+                            <>
+                                <p ref={target} onMouseOver={() => setShow(!show)}>
+                                    <Nav.Link  href="#action1" className='m-2 mt-2'>{user?.photoURL ?
+                                        <Image roundedCircle style={{ height: '30px' }} src={user.photoURL}></Image>
+                                        : <FaUser></FaUser>}
+                                    </Nav.Link>
+                                </p>
+                                <Overlay target={target.current} show={show} placement="right">
+                                    {(props) => (
+                                        <Tooltip id="overlay-example" {...props}>
+                                            {user?.displayName}
+                                        </Tooltip>
+                                    )}
+                                </Overlay>
+                            </>
+
+
+
+
+
+
+                            
 
 
 
