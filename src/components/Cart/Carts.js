@@ -7,7 +7,7 @@ import Card from 'react-bootstrap/Card';
 const Carts = () => {
     const carts= useLoaderData()
     return (
-        <div className='d-flex justify-content-center align-items center'>
+        <div className='d-flex justify-content-center align-items center course-details'>
             
 
 

@@ -44,6 +44,11 @@ const Main = () => {
 
                         </Row>
                     </Container>
+                    <div className='bg-danger d-flex align-items-end'>
+
+                        footer
+
+                    </div>
 
 
 

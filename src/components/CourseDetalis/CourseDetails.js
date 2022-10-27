@@ -13,7 +13,7 @@ const CourseDetails = () => {
     console.log(courses);
     return (
         
-            <div className='print h-full'>
+            <div className='print course-details'>
                 <div>
                     <div>
                         <Card className="text-center mb-5 mt-5 shadow">

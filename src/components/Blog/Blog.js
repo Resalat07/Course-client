@@ -3,7 +3,7 @@ import { Accordion } from 'react-bootstrap';
 
 const Blog = () => {
     return (
-        <div>
+        <div className='course-details'>
 
 
             <Accordion defaultActiveKey="0">

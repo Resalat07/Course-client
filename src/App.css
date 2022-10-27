@@ -32,7 +32,12 @@
 
 }
 #dark .font-text{
+
   color: #fff;
+}
+#dark .course-details{
+  background-color: #2f103f;
+  height: 100vh;
 }
 
 #dark  {

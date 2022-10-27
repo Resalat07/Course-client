@@ -29,7 +29,7 @@ const FAQPage = () => {
 
 
     return (
-        <div className='p-4 rounded m-5'>
+        <div className='p-4 rounded m-5 course-details'>
             <section className="title-center p-4 rounded">
 				<Faq data={data} />
 			</section>
