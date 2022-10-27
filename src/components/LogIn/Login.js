@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { FaGoogle } from 'react-icons/fa'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
 
@@ -37,7 +37,7 @@ const Login = () => {
             console.log(error)})
     }
     return (
-        <div className='d-flex justify-content-center align-items-center'>
+        <div className='d-flex justify-content-center align-items-center course-details'>
 
         <div>
             <div className='text-primary text-center mb-5'><h1>Login Now</h1></div>
@@ -82,10 +82,10 @@ const Login = () => {
 
             <div className='d-flex justify-content-center align-items-center'>
                 <div>
-                    <p ><span className='text-primary'><span className='fw-bold'>Or,</span> Login With</span> 
+                    <p ><span className='text-primary'><span className='fw-bold'>Or,</span> Go to </span> <Link to='/register'>register page.</Link> 
 
 
-                    <Button  variant="outline-success" className='m-2'> Google <FaGoogle></FaGoogle>  </Button></p>
+                    </p>
                 </div>
             </div>
         </div>

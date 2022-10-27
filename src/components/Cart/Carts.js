@@ -12,6 +12,8 @@ const Carts = () => {
 
 
             <Card className="text-center mb-5 mt-5 shadow m-4 w-75 ">
+
+                <h2 className='text-primary'>Cart Page</h2>
                
                 <Card.Body>
                 <Card.Img variant="top" className="w-75" src={carts.picture} />

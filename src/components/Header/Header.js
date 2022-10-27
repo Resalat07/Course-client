@@ -59,7 +59,7 @@ const Header = (props) => {
 
 
                         <div className='d-flex justify-content-center'>
-                            <Nav.Link className='mt-3' href="#action1"><Link className='font-text' to='/'>Home</Link></Nav.Link>
+                            <Nav.Link className='mt-3' href="#action1"><Link className='font-text' to='/'>Course</Link></Nav.Link>
                             <Nav.Link className='mt-3 m-2' href="#action2"> <Link className='font-text' to='/faqs'>FAQ</Link></Nav.Link>
                             <Nav.Link className='mt-3 m-2' href="#action2"> <Link className='font-text' to='/blog'>Blogs</Link></Nav.Link>
 
