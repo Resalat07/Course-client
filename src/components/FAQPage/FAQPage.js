@@ -7,39 +7,34 @@ const FAQPage = () => {
         title: "FAQ (How it works)",
         rows: [
             {
-                title: "Lorem ipsum dolor sit amet,",
-                content: "Lorem ipsum dolor sit amet, consectetur "
+                title: "Is it Life Time Access,",
+                content: "Yes you can access it lifetime "
             },
             {
-                title: "Nunc maximus, magna at ultricies elementum",
+                title: "How We Support",
                 content:
-                    "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
+                    "we support by social media and live class"
             },
             {
-                title: "Curabitur laoreet, mauris vel blandit fringilla",
+                title: "Is This Course Helpfull",
                 content:
-                    "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
+                    "Yes it's design by professional"
             },
             {
-                title: "What is the package version",
-                content: "v1.0.5"
+                title: "Do You Have Any App",
+                content: "Yes, LearnEasy in app stor and playsote available"
             }
         ]
     };
 
 
     return (
-        <div>
-            <section className="title-center">
+        <div className='p-4 rounded m-5'>
+            <section className="title-center p-4 rounded">
 				<Faq data={data} />
 			</section>
-			<br />
-			<br />
-			<br />
-			<br />
-			<section className="center">
-				<Faq data={data} />
-			</section>
+			
+			
             
         </div>
     );

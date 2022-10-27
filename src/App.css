@@ -16,8 +16,13 @@
   background-color: #fff;
 }
 
+#dark .tx-dr{
+ color: #fff;
+ background-color: #1c0a25;
+}
+
 #dark  {
-  background-color: #1c0a25;
+  background-color: #2f103f;
 }
 .App-header {
   background-color: #282c34;
