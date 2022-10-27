@@ -1,11 +1,11 @@
 import React from 'react';
-import { useRouteError } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
 
     const error = useRouteError()
     return (
-        <div>
+        <div className='text-center'>
 
 
 
@@ -17,6 +17,7 @@ const ErrorPage = () => {
                     <p>{error.status}</p>
                 </div>
             )}
+            <p>Go to  <Link to='/'>Home</Link></p>
 
 
 
