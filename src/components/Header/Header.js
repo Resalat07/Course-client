@@ -42,9 +42,9 @@ const Header = (props) => {
     return (
         <div>
 
-            <Navbar bg="" className='' expand="lg">
+            <Navbar bg="" expand="lg">
                 <Container >
-                    <Navbar.Brand href="#">EasyLearn</Navbar.Brand>
+                    <Navbar.Brand href="#" className='tx-dr' ><Link className='font-text-nav' to='/'>EasyLearn</Link></Navbar.Brand>
                     <Navbar.Toggle aria-controls="navbarScroll" />
                     <Navbar.Collapse id="navbarScroll">
                         <Nav
@@ -77,7 +77,7 @@ const Header = (props) => {
 
                             <>
                                 <p ref={target} onMouseOver={() => setShow(!show)}>
-                                    <Nav.Link  href="#action1" className='m-2 mt-2'>{user?.photoURL ?
+                                    <Nav.Link  href="#action1" className='m-2 mt-3'>{user?.photoURL ?
                                         <Image roundedCircle style={{ height: '30px' }} src={user.photoURL}></Image>
                                         : <FaUser></FaUser>}
                                     </Nav.Link>
@@ -106,7 +106,7 @@ const Header = (props) => {
                             <Nav.Link href="#deets" className='d-flex justify-content-center'>{
                                 user?.uid ?
                                     <>
-                                        <h5 className='p-2 mt-2'>{user?.displayName}</h5>
+                                        <h5 className='p-2 mt-2 font-text'>{user?.displayName}</h5>
                                         <div className='mt-2'><Button onClick={handleLogOut} className='fw-bold fs-6' variant="outline-danger">Log Out</Button></div>
                                     </>
                                     :

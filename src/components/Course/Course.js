@@ -11,12 +11,12 @@ const Course = () => {
         .then(data=>setCourse(data))
     },[])
     return (
-        <div>
-            here course : {courses.length}
-            <div>
+        <div >
+            
+            <div className='mt-5'>
                 {
                     courses.map(course=><p key={course.id}>
-                        <Link to={`/courseDetail/${course.id}`}>{course.name}</Link>
+                        <Link className='font-text' to={`/courseDetail/${course.id}`}>{course.name}</Link>
                     </p>)
                 }
             </div>

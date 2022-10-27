@@ -16,13 +16,28 @@
   background-color: #fff;
 }
 
-#dark .tx-dr{
- color: #fff;
- background-color: #1c0a25;
+
+
+.font-text-nav{
+  
+  text-decoration: none;
+  color: rgb(81, 81, 82);
+  font-size: 2rem;
+}
+
+#dark .font-text-nav{
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+
+}
+#dark .font-text{
+  color: #fff;
 }
 
 #dark  {
   background-color: #2f103f;
+  max-height: fit-content;
 }
 .App-header {
   background-color: #282c34;
