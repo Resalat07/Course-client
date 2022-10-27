@@ -44,9 +44,11 @@ const Main = () => {
 
                         </Row>
                     </Container>
-                    <div className='bg-danger d-flex align-items-end'>
+                    <div className='bg d-flex align-items-end justify-content-center align-items-center'>
 
-                        footer
+                        <p className='text-white '>
+                            Copy Right 2022,
+                        </p>
 
                     </div>
 

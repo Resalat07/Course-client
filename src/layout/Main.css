@@ -1,8 +1,6 @@
 
-#light .main {
-    background-color: #fff;
-  }
-  
-  #dark .main {
-    background-color: #161118;
-  }
+.bg{
+  background-color: rgb(54, 56, 58);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
