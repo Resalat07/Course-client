@@ -7,16 +7,21 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link } from "react-router-dom";
 import learning from '../../animation/learning.json';
-import { AiOutlineArrowRight } from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import FadeLoader from "react-spinners/FadeLoader";
 
 
 
 const Home = () => {
     const [courseDets, setCourseDets] = useState([])
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         fetch('https://course-server-resalat07.vercel.app/course')
             .then(res => res.json())
-            .then(data => setCourseDets(data))
+            .then(data => {
+                setCourseDets(data)
+                setLoading(false)
+            })
     }, [])
 
     console.log(courseDets)
@@ -35,7 +40,22 @@ const Home = () => {
             <div >
                
 
-                    <div className="row mt-5">
+                    {
+                        loading ?
+
+                        <div className=" d-flex justify-content-center align-items center p-6 m-6">
+                             <FadeLoader
+                        color="#3671d6"
+                        height={40}
+                        width={7}
+                    />
+                        </div>
+
+
+                        :
+
+
+                        <div className="row mt-5">
                         {
                             courseDets.map(courseDet => <div className="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items center"  key={courseDet.course_id}>
 
@@ -58,6 +78,7 @@ const Home = () => {
                             </div>)
                         }
                     </div>
+                    }
 
 
                 

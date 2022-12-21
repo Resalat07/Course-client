@@ -77,18 +77,38 @@ const Header = (props) => {
 
                             <>
                                 <p ref={target} onMouseOver={() => setShow(!show)}>
-                                    <Nav.Link  href="#action1" className='m-2 mt-3'>{user?.photoURL ?
+                                    <Nav.Link href="#action1" className='m-2 mt-3'>{user?.photoURL ?
                                         <Image roundedCircle style={{ height: '30px' }} src={user.photoURL}></Image>
                                         : <FaUser></FaUser>}
                                     </Nav.Link>
                                 </p>
-                                <Overlay target={target.current} show={show} placement="right">
+
+                                {
+                                    user?.displayName ?
+
+                                        <Overlay target={target.current} show={show} placement="right">
+                                            {(props) => (
+                                                <Tooltip id="overlay-example" {...props}>
+                                                    {user?.displayName}
+                                                </Tooltip>
+                                            )}
+                                        </Overlay>
+
+                                        :
+
+                                        <div></div>
+
+                                    
+
+
+                                }
+                                {/* <Overlay className='m-2'  target={target.current} show={show} placement="right">
                                     {(props) => (
                                         <Tooltip id="overlay-example" {...props}>
                                             {user?.displayName}
                                         </Tooltip>
                                     )}
-                                </Overlay>
+                                </Overlay> */}
                             </>
 
 
@@ -96,7 +116,7 @@ const Header = (props) => {
 
 
 
-                            
+
 
 
 

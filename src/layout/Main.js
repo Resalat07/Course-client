@@ -32,7 +32,7 @@ const Main = () => {
                     <Header onChange={getData}></Header>
 
                     
-                    <Container>
+                    <Container className=' hScreen'>
                         <Row>
                             <Col lg='2' className='d-none d-lg-block'>
 

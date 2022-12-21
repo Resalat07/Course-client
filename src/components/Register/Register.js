@@ -11,6 +11,7 @@ import './Register.css'
 const Register = () => {
 
     const [error , setError] =useState('');
+    
 
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider()
